@@ -161,48 +161,52 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . e e . . . . . . . 
         `)
 })
+function geamstart () {
+    info.setScore(0)
+    Dori = sprites.create(img`
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . d . e e e e . d . . . . 
+        . . . d d e e e e e e d d . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . 3 . d e e e e e e d . 3 . . 
+        . . . d d d e e e e d d d . . . 
+        . . 3 d d . e e e e . d d 3 . . 
+        . . . 3 . . f e e f . . 3 . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . d d . . . . . . . 
+        . . . . . . . 3 3 . . . . . . . 
+        `, SpriteKind.Player)
+    Ed = sprites.create(img`
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . d . e e e e . d . . . . 
+        . . . d d e e e e e e d d . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . 3 . d e e e e e e d . 3 . . 
+        . . . d d d e e e e d d d . . . 
+        . . 3 d d . c e e c . d d 3 . . 
+        . . . 3 . c f c c f c . 3 . . . 
+        . . . . . . c e e c . . . . . . 
+        . . . . . . . d d . . . . . . . 
+        . . . . . . . 3 3 . . . . . . . 
+        `, SpriteKind.Player)
+    controller.moveSprite(Dori)
+    controller.moveSprite(Ed)
+    level_1()
+}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (level == 0) {
-        level_1()
-        info.setScore(0)
-        Dori = sprites.create(img`
-            . . . . . . . e e . . . . . . . 
-            . . . . . . . e e . . . . . . . 
-            . . . . d . e e e e . d . . . . 
-            . . . d d e e e e e e d d . . . 
-            . . . . . e e e e e e . . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . 3 . d e e e e e e d . 3 . . 
-            . . . d d d e e e e d d d . . . 
-            . . 3 d d . e e e e . d d 3 . . 
-            . . . 3 . . f e e f . . 3 . . . 
-            . . . . . . . e e . . . . . . . 
-            . . . . . . . d d . . . . . . . 
-            . . . . . . . 3 3 . . . . . . . 
-            `, SpriteKind.Player)
-        Ed = sprites.create(img`
-            . . . . . . . e e . . . . . . . 
-            . . . . . . . e e . . . . . . . 
-            . . . . d . e e e e . d . . . . 
-            . . . d d e e e e e e d d . . . 
-            . . . . . e e e e e e . . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . . . e e e e e e e e . . . . 
-            . . 3 . d e e e e e e d . 3 . . 
-            . . . d d d e e e e d d d . . . 
-            . . 3 d d . c e e c . d d 3 . . 
-            . . . 3 . c f c c f c . 3 . . . 
-            . . . . . . c e e c . . . . . . 
-            . . . . . . . d d . . . . . . . 
-            . . . . . . . 3 3 . . . . . . . 
-            `, SpriteKind.Player)
-        controller.moveSprite(Dori)
-        controller.moveSprite(Ed)
+        level = 1
+        geamstart()
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -244,7 +248,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
 })
 function level_1 () {
-    level = 1
     tiles.setCurrentTilemap(tilemap`level1`)
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
