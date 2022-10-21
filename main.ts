@@ -129,6 +129,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 function level_1 () {
+    level = 1
     tiles.setCurrentTilemap(tilemap`level1`)
 }
 let level = 0
