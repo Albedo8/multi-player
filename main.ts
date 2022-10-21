@@ -164,6 +164,45 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (level == 0) {
         level_1()
+        info.setScore(0)
+        Dori = sprites.create(img`
+            . . . . . . . e e . . . . . . . 
+            . . . . . . . e e . . . . . . . 
+            . . . . d . e e e e . d . . . . 
+            . . . d d e e e e e e d d . . . 
+            . . . . . e e e e e e . . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . 3 . d e e e e e e d . 3 . . 
+            . . . d d d e e e e d d d . . . 
+            . . 3 d d . e e e e . d d 3 . . 
+            . . . 3 . . f e e f . . 3 . . . 
+            . . . . . . . e e . . . . . . . 
+            . . . . . . . d d . . . . . . . 
+            . . . . . . . 3 3 . . . . . . . 
+            `, SpriteKind.Player)
+        Ed = sprites.create(img`
+            . . . . . . . e e . . . . . . . 
+            . . . . . . . e e . . . . . . . 
+            . . . . d . e e e e . d . . . . 
+            . . . d d e e e e e e d d . . . 
+            . . . . . e e e e e e . . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . . . e e e e e e e e . . . . 
+            . . 3 . d e e e e e e d . 3 . . 
+            . . . d d d e e e e d d d . . . 
+            . . 3 d d . c e e c . d d 3 . . 
+            . . . 3 . c f c c f c . 3 . . . 
+            . . . . . . c e e c . . . . . . 
+            . . . . . . . d d . . . . . . . 
+            . . . . . . . 3 3 . . . . . . . 
+            `, SpriteKind.Player)
+        controller.moveSprite(Dori)
+        controller.moveSprite(Ed)
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -284,45 +323,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . 3 3 . . . . . . . 
         `)
 })
-let level = 0
 let Ed: Sprite = null
 let Dori: Sprite = null
+let level = 0
 title()
-Dori = sprites.create(img`
-    . . . . . . . e e . . . . . . . 
-    . . . . . . . e e . . . . . . . 
-    . . . . d . e e e e . d . . . . 
-    . . . d d e e e e e e d d . . . 
-    . . . . . e e e e e e . . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . 3 . d e e e e e e d . 3 . . 
-    . . . d d d e e e e d d d . . . 
-    . . 3 d d . e e e e . d d 3 . . 
-    . . . 3 . . f e e f . . 3 . . . 
-    . . . . . . . e e . . . . . . . 
-    . . . . . . . d d . . . . . . . 
-    . . . . . . . 3 3 . . . . . . . 
-    `, SpriteKind.Player)
-Ed = sprites.create(img`
-    . . . . . . . e e . . . . . . . 
-    . . . . . . . e e . . . . . . . 
-    . . . . d . e e e e . d . . . . 
-    . . . d d e e e e e e d d . . . 
-    . . . . . e e e e e e . . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . . . e e e e e e e e . . . . 
-    . . 3 . d e e e e e e d . 3 . . 
-    . . . d d d e e e e d d d . . . 
-    . . 3 d d . c e e c . d d 3 . . 
-    . . . 3 . c f c c f c . 3 . . . 
-    . . . . . . c e e c . . . . . . 
-    . . . . . . . d d . . . . . . . 
-    . . . . . . . 3 3 . . . . . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(Dori)
-controller.moveSprite(Ed)
