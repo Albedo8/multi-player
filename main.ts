@@ -123,18 +123,172 @@ function title () {
         eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
         `)
 }
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    Dori.setImage(img`
+        . . . . . . . 3 3 . . . . . . . 
+        . . . . . . . d d . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . 3 . . f e e f . . 3 . . . 
+        . . 3 d d . e e e e . d d 3 . . 
+        . . . d d d e e e e d d d . . . 
+        . . 3 . d e e e e e e d . 3 . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . d d e e e e e e d d . . . 
+        . . . . d . e e e e . d . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        `)
+    Ed.setImage(img`
+        . . . . . . . 3 3 . . . . . . . 
+        . . . . . . . d d . . . . . . . 
+        . . . . . . c e e c . . . . . . 
+        . . . 3 . c f c c f c . 3 . . . 
+        . . 3 d d . c e e c . d d 3 . . 
+        . . . d d d e e e e d d d . . . 
+        . . 3 . d e e e e e e d . 3 . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . d d e e e e e e d d . . . 
+        . . . . d . e e e e . d . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        `)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (level == 0) {
         level_1()
     }
 })
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    Dori.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . 3 . 3 . . . . . . . . . 
+        . . . 3 d d . . . . . . d . . . 
+        . . . . d d d e e e e . d d . . 
+        . . . . . d e e e e e e e . . . 
+        . . . f e e e e e e e e e e . . 
+        3 d e e e e e e e e e e e e e e 
+        3 d e e e e e e e e e e e e e e 
+        . . . f e e e e e e e e e e . . 
+        . . . . . d e e e e e e e . . . 
+        . . . . d d d e e e e . d d . . 
+        . . . 3 d d . . . . . . d . . . 
+        . . . . 3 . 3 . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+    Ed.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . 3 . 3 . . . . . . . . . 
+        . . . 3 d d . . . . . . d . . . 
+        . . . . d d d e e e e . d d . . 
+        . . . c . d e e e e e e e . . . 
+        . . c f c e e e e e e e e e . . 
+        3 d e c e e e e e e e e e e e e 
+        3 d e c e e e e e e e e e e e e 
+        . . c f c e e e e e e e e e . . 
+        . . . c . d e e e e e e e . . . 
+        . . . . d d d e e e e . d d . . 
+        . . . 3 d d . . . . . . d . . . 
+        . . . . 3 . 3 . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+})
 function level_1 () {
     level = 1
     tiles.setCurrentTilemap(tilemap`level1`)
 }
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    Dori.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . 3 . 3 . . . . 
+        . . . d . . . . . . d d 3 . . . 
+        . . d d . e e e e d d d . . . . 
+        . . . e e e e e e e d . . . . . 
+        . . e e e e e e e e e e f . . . 
+        e e e e e e e e e e e e e e d 3 
+        e e e e e e e e e e e e e e d 3 
+        . . e e e e e e e e e e f . . . 
+        . . . e e e e e e e d . . . . . 
+        . . d d . e e e e d d d . . . . 
+        . . . d . . . . . . d d 3 . . . 
+        . . . . . . . . . 3 . 3 . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+    Ed.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . 3 . 3 . . . . 
+        . . . d . . . . . . d d 3 . . . 
+        . . d d . e e e e d d d . . . . 
+        . . . e e e e e e e d . c . . . 
+        . . e e e e e e e e e c f c . . 
+        e e e e e e e e e e e e c e d 3 
+        e e e e e e e e e e e e c e d 3 
+        . . e e e e e e e e e c f c . . 
+        . . . e e e e e e e d . c . . . 
+        . . d d . e e e e d d d . . . . 
+        . . . d . . . . . . d d 3 . . . 
+        . . . . . . . . . 3 . 3 . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+})
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    Dori.setImage(img`
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . d . e e e e . d . . . . 
+        . . . d d e e e e e e d d . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . 3 . d e e e e e e d . 3 . . 
+        . . . d d d e e e e d d d . . . 
+        . . 3 d d . e e e e . d d 3 . . 
+        . . . 3 . . f e e f . . 3 . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . d d . . . . . . . 
+        . . . . . . . 3 3 . . . . . . . 
+        `)
+    Ed.setImage(img`
+        . . . . . . . e e . . . . . . . 
+        . . . . . . . e e . . . . . . . 
+        . . . . d . e e e e . d . . . . 
+        . . . d d e e e e e e d d . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . . . e e e e e e e e . . . . 
+        . . 3 . d e e e e e e d . 3 . . 
+        . . . d d d e e e e d d d . . . 
+        . . 3 d d . c e e c . d d 3 . . 
+        . . . 3 . c f c c f c . 3 . . . 
+        . . . . . . c e e c . . . . . . 
+        . . . . . . . d d . . . . . . . 
+        . . . . . . . 3 3 . . . . . . . 
+        `)
+})
 let level = 0
+let Ed: Sprite = null
+let Dori: Sprite = null
 title()
-let Dori = sprites.create(img`
+Dori = sprites.create(img`
     . . . . . . . e e . . . . . . . 
     . . . . . . . e e . . . . . . . 
     . . . . d . e e e e . d . . . . 
@@ -152,7 +306,7 @@ let Dori = sprites.create(img`
     . . . . . . . d d . . . . . . . 
     . . . . . . . 3 3 . . . . . . . 
     `, SpriteKind.Player)
-let Ed = sprites.create(img`
+Ed = sprites.create(img`
     . . . . . . . e e . . . . . . . 
     . . . . . . . e e . . . . . . . 
     . . . . d . e e e e . d . . . . 
